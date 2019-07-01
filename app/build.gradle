@@ -4,6 +4,12 @@ apply plugin: 'kotlin-android'
 
 apply plugin: 'kotlin-android-extensions'
 
+apply plugin: 'resources-generator'
+
+resourcesGenerator {
+    packageName "com.gc.resourcesgenerator.demo"
+}
+
 android {
     compileSdkVersion 28
     defaultConfig {
