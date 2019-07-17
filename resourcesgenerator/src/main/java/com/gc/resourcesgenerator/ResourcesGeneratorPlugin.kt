@@ -7,7 +7,7 @@ class ResourcesGeneratorPlugin : Plugin<Project> {
 
     override fun apply(project: Project) {
         val projectConfiguration = project.extensions.create("resourcesGenerator", ResourcesGeneratorConfiguration::class.java)
-        val task = (project.tasks.create("generateResources", ResourcesGeneratorTask::class.java) as ResourcesGeneratorTask).apply {
+        val task = (project.tasks.create("generateStringsResources", ResourcesGeneratorTask::class.java) as ResourcesGeneratorTask).apply {
             configuration = projectConfiguration
         }
         project.afterEvaluate {
